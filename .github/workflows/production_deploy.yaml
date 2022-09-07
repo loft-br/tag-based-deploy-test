@@ -1,0 +1,10 @@
+name: endpoint roduction deploy
+on:
+  workflow_call:
+
+jobs:
+  production_deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: echo "I'm deploying something on production"

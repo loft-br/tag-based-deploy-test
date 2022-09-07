@@ -1,4 +1,4 @@
-name: Model deploy
+name: endpoint  deploy
 on:
   workflow_dispatch:
   create:
@@ -11,12 +11,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Greetings
-        run: echo "oi to the world"
       - name: Stage deploy
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: echo "Stage deploy of branch ${{ github.ref_name }}"
       - name: Production deploy
         if: github.event_name == 'create' && startsWith(github.ref, 'refs/tags/')
         run: echo "Production deploy of tag ${{ github.ref_name }}"
+        uses: rafaelsoarespinto/tag-based-deploy-test/.github/workflows/production_deploy.yaml
+
 
