@@ -2,7 +2,7 @@ name: Model deploy
 on:
   create:
     tags:
-      - *
+      - "*"
 
 jobs:
   deploys:
