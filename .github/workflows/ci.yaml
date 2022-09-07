@@ -1,0 +1,11 @@
+name: Model deploy
+on:
+  create:
+    tags:
+      - *
+
+jobs:
+  deploys:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "oi to the world"
