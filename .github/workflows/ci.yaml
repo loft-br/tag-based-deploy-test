@@ -17,6 +17,6 @@ jobs:
       - name: Production deploy
         if: github.event_name == 'create' && startsWith(github.ref, 'refs/tags/')
         #run: echo "Production deploy of tag ${{ github.ref_name }}"
-        uses: rafaelsoarespinto/tag-based-deploy-test/.github/workflows/production_deploy.yaml
+        uses: ./.github/workflows/production_deploy.yaml
 
 
