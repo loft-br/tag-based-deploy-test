@@ -1,5 +1,6 @@
 name: Model deploy
 on:
+  workflow_dispatch:
   create:
     tags:
       - "*"
@@ -8,4 +9,7 @@ jobs:
   deploys:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "oi to the world"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Do something
+        run: echo "oi to the world"
