@@ -1,0 +1,10 @@
+name: endpoint stage deploy
+on:
+  workflow_call:
+
+jobs:
+  stage_deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Starting deploy
+        run: echo " stage deploy"
