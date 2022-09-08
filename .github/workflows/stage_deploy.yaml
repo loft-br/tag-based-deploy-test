@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Starting deploy
-        run: echo " stage deploy"
+        run: | 
+          echo "stage deploy"
+          echo ${{ github.ref_name }}

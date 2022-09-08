@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Start
-        run: echo "I'm deploying something on production"
+        run: |
+          echo "I'm deploying something on production"
+          echo ${{ github.ref_name }}

@@ -1,4 +1,4 @@
-name: endpoint  deploy
+name: endpoint deploy
 on:
   workflow_dispatch:
   create:
