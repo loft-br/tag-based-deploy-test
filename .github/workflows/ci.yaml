@@ -1,16 +1,37 @@
-name: endpoint deploy
+name: Release
 on:
-  workflow_dispatch:
-  create:
-    tags:
-      - "*"
+  push:
+    branches: [ main ]
 
 jobs:
-  stage:
-    if: github.event_name == 'workflow_dispatch'
-    uses: ./.github/workflows/stage_deploy.yaml    
-  production:
-    if: github.event_name == 'create' && startsWith(github.ref, 'refs/tags')
-    uses: ./.github/workflows/production_deploy.yaml
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic
+        with:
+          semantic_version: 20.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# name: endpoint deploy
+# on:
+#   workflow_dispatch:
+#   create:
+#     tags:
+#       - "*"
+
+# jobs:
+#   stage:
+#     if: github.event_name == 'workflow_dispatch'
+#     uses: ./.github/workflows/stage_deploy.yaml    
+#   production:
+#     if: github.event_name == 'create' && startsWith(github.ref, 'refs/tags')
+#     uses: ./.github/workflows/production_deploy.yaml
 
 
