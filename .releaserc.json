@@ -4,11 +4,7 @@
     [
       "@semantic-release/commit-analyzer",
       {
-      "releaseRules": [
-          { "tag": "Breaking", "release": "major" },
-          { "tag": "feat", "release": "minor" },
-          { "tag": "fix", "release": "patch" }   
-        ]
+        "preset": "angular"
       }
     ],
     "@semantic-release/github"
