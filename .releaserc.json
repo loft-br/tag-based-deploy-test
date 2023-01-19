@@ -3,11 +3,13 @@
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
+      {
       "releaseRules": [
           { "tag": "Breaking", "release": "major" },
           { "tag": "feat", "release": "minor" },
           { "tag": "fix", "release": "patch" }   
         ]
+      }
     ],
     "@semantic-release/github"
   ]
