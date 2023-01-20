@@ -13,6 +13,11 @@
         "publishCmd": "poetry version ${nextRelease.version}"
       }
     ],
-    "@semantic-release/github"
+    [
+      "@semantic-release/github"
+    ],
+    [
+      "@semantic-release/git"
+    ]
   ]
 }
