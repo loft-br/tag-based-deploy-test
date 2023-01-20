@@ -17,7 +17,9 @@
       "@semantic-release/github"
     ],
     [
-      "@semantic-release/git"
+      "@semantic-release/git",
+        "assets": ["pyproject.toml"],
+        "message": "chore(release): Version bump ${nextRelease.version} [skip ci]"
     ]
   ]
 }
