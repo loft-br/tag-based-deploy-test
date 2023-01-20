@@ -7,6 +7,12 @@
         "preset": "angular"
       }
     ],
+    [
+      "@semantic-release/exec", 
+      {
+        "publishCmd": "poetry version ${nextRelease.version}"
+      }
+    ],
     "@semantic-release/github"
   ]
 }
