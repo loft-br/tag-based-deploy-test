@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "market-data-orchestrator"
-version = "0.4.3"
+version = "0.4.5"
 description = ""
 authors = [
     "x <x.x@loft.com.br>"
