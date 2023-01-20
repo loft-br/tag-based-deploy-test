@@ -10,7 +10,7 @@
     [
       "@semantic-release/exec", 
       {
-        "publishCmd": "poetry version ${nextRelease.version}"
+        "prepareCmd": "poetry version ${nextRelease.version}"
       }
     ],
     [
