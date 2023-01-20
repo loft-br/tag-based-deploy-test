@@ -10,7 +10,7 @@
     [
       "@semantic-release/exec", 
       {
-        "prepareCmd": "poetry version ${nextRelease.version}"
+        "prepareCmd": "poetry version ${nextRelease.version} && poetry build && tar -C . --strip-components 1 -zxvf ./dist/${nextRelease.version}.tar.gz ${nextRelease.version}/setup.py && rm -rf ./dist"
       }
     ],
     [
