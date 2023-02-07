@@ -12,6 +12,6 @@ jobs:
       - name: Checkout MLOps tools repo
         uses: actions/checkout@v3
         with:
-          repo: loft-br/mlops-platform-tools
+          repository: loft-br/mlops-platform-tools
           ref: v2.2.2
         
