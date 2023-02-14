@@ -14,4 +14,5 @@ jobs:
         with:
           repository: loft-br/b2b-insights-bff
           ref: main
+          token: ${{ secrets.GIT_HUB_TOKEN }}
         
