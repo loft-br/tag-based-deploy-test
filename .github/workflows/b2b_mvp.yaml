@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Checkout MLOps tools repo
+      - name: Checkout BFF
         uses: actions/checkout@v3
         with:
-          repository: loft-br/mlops-platform-tools
-          ref: v2.2.2
+          repository: loft-br/b2b-insights-bff
+          ref: main
         
